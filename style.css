@@ -1,0 +1,121 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2F4F3;
+    box-shadow: 0px 4px 7px lightgray;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+nav #logo {
+    padding-left: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 400px;
+    margin-right: 50px;
+}
+
+nav ul li {
+    padding-right: 30px;
+}
+
+.banner-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 88vh;
+}
+
+.banner-principal #carro1 {
+    padding-left: 36px;
+}
+
+.banner-principal h1 {
+    padding-left: 40px;
+    font-size: 75px;
+    font-family: 'Lato', sans-serif;
+}
+
+.banner-principal h1::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.banner-principal h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.banner-principal h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(235, 37, 30);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+.banner-principal #text-main {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.description {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    background-color: #F2F4F3;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.informations-items {
+    flex-basis: 50%;
+}
+
+.informations-items:nth-child(1) {
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+}
+
+.informations-items:nth-child(2) {
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #85d0bc;
+    border: 1px solid #028082;
+    width: 45%;
+    height: 600px;
+    margin: 0 auto;
+    color: #028082;
+}
+
+.item {
+    background-color: #cdf6eb;
+    border: 1px solid #028082;
+    height: 40px;
+    flex-basis: auto;
+    flex-grow: 1;
+}
